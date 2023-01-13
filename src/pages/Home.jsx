@@ -1,11 +1,10 @@
-import React from 'react'
+import Main from '../templates/home/Main'
+import useFetchProducts from '../hooks/useFetchProducts'
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  )
+  const { products } = useFetchProducts()
+
+  return <Main products={products} />
 }
 
 export default Home
